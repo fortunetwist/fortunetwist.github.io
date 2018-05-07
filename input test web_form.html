@@ -1,0 +1,59 @@
+
+<style type="text/css">
+#outputdiv {background-color: yellow; font-size: 42pt; padding: 90px; margin: 10px; }
+</style>
+
+<script type="text/javascript">
+function myFunction()
+	{
+	var myId = document.getElementById("outputdiv");
+	// fetch the id, then fetch the form data 
+
+
+	// puts form data into the div
+	myId.innerHTML = myForm.myText.value;
+
+	var humanAnswer = 0;
+	humanAnswer = myForm.myText.value;
+
+	console.log(" your answer was: " + humanAnswer );
+	console.log("the length of your answer is : " +   humanAnswer.length   );
+
+
+	}
+</script>
+
+
+
+
+
+
+<body>
+
+	<form>
+
+        <input type="text"  >
+
+	</form>
+
+
+	<div id="outputdiv"  > 
+		Type text in the form below, then hit the button
+	</div>
+
+
+
+	<form name="myForm" >
+
+		<input name="myText" type="text" >
+	
+	</form><!-- end of form1 -->
+
+
+
+
+	<button onclick=myFunction() > Click me </button>
+
+
+
+</body>
