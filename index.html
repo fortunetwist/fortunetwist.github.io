@@ -8,24 +8,22 @@
 function startGame(){
 
 var userName= prompt("Hello, my inquisitive friend. May I ask your name?");
-var feedback = "Alright, " + userName + ", I have gathered that you with to have your fortune told? Let us begin your session!"  ;
+ alert("Alright, " + userName + ", I have gathered that you with to have your fortune told? Let us begin your session!");
 
-//alert(feedback);
+// here is the first output function
+function alright(){
+
+tempId= document.getElementById("youWant");
+
+tempId.innerHTML="Alright, " + userName + ", I have gathered that you with to have your fortune told? Let us begin your session!";
+}// end function:alright
+
 
 
 // dear SAF I am so proud of you, signed mr. Rowe
 // please examine the output test file , then merge that code in here...
 
 
-// fetch id of our target
-var tempID = 
-
-
-// spit out new message into that target
-
-
-
-} // close of function
 
 // plan: first, set up basic concept with only one option for each sentence portion, using alerts and prompts.
 // step two: set up a way to give each sentence part more than one option, based on numbers picked by the user.
