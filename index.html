@@ -1,22 +1,50 @@
 <html>
 <head>
-<title>Fortune Teller With A Twist v5.7.343 update </title>
+<title>Fortune Teller With A Twist v5.21.309 update </title>
 
 <script>
 
 
-function startGame(){
+/* var listOfQuestions = [
+"Hello, inquisitive traveler. May I ask your name?",
 
-var userName= prompt("Hello, my inquisitive friend. May I ask your name?");
- alert("Alright, " + userName + ", I have gathered that you with to have your fortune told? Let us begin your session!");
 
+"In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one)",
+yearsNumber + "? alright, the spirits require another integer. Between one and three.",
+"Yes, yes. The spirits are growing intrigued. They request another integer, between one and four.",
+"The spirits are growing near to a conclusion, they beg an additional integer. Between one and three.",
+"The spirits grow impatiant. They have plans soon, but cannot leave until the cerimony is complete. They demand another integer, between one and three."
+"The spirits wish for one, final integer. An integer between one and three."
+] */
+
+
+
+
+
+ 
 // here is the first output function
-function alright(){
+function nextThought(){
 
-tempId= document.getElementById("youWant");
+var userName=0
 
-tempId.innerHTML="Alright, " + userName + ", I have gathered that you with to have your fortune told? Let us begin your session!";
-}// end function:alright
+userName= nameForm.nameText.value
+//end first question
+
+
+
+ tempId= document.getElementById("introduction");
+
+tempId.innerHTML="Alright, " + userName + " , I have gathered that you wish to have your fortune told? Let us begin your session!"; 
+//end first response
+
+tempId= document.getElementById("firstNumberquestion");
+
+tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click anywhere to continue.)"
+//end second response
+
+} // end function nextThought
+
+//need to add user
 
 
 
@@ -38,18 +66,29 @@ tempId.innerHTML="Alright, " + userName + ", I have gathered that you with to ha
 
 </head>
 
+<body onclick=nextThought()>
+
+<p onclick=nextThought> input your username in the following space, then click anywhere to begin. </p>
 
 
-<body>
+	<form name="nameForm" >
 
-<button onclick=startGame() >
-    click me to start game
-</button>
+		<input name="nameText" type="text" >
+	
+	</form>
 
 
-<p id="myid">
-This is a paragraph and it will soon change
-</p>
+
+<div id="introduction"> first message will appear here. </div>
+
+<div id= "firstNumberquestion">  second message will appear here. </div>
+
+
+	<form name="firstNumberForm" >
+
+		<input name="firstNumberText" type="text" >
+	
+	</form>
 
 
 

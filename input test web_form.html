@@ -10,14 +10,22 @@ function myFunction()
 	// fetch the id, then fetch the form data 
 
 
-	// puts form data into the div
-	myId.innerHTML = myForm.myText.value;
 
 	var humanAnswer = 0;
-	humanAnswer = myForm.myText.value;
+
+	
+	humanAnswer = myForm.myText.value  +  "    "    +  saf.foot.value ;
+
+
+
 
 	console.log(" your answer was: " + humanAnswer );
 	console.log("the length of your answer is : " +   humanAnswer.length   );
+
+
+
+	// puts form data into the div  please no alerts!!!
+	myId.innerHTML = humanAnswer;
 
 
 	}
@@ -30,15 +38,18 @@ function myFunction()
 
 <body>
 
-	<form>
+	<form name="saf">
 
-        <input type="text"  >
+        <input name="foot" type="text"  >
 
 	</form>
 
 
+	<!-- the form above is empty  -->
+
+
 	<div id="outputdiv"  > 
-		Type text in the form below, then hit the button
+		Type text, then hit the button to watch this yellow div change
 	</div>
 
 
