@@ -3,42 +3,75 @@
 
 <script>
 
-var userName="yo"
 
-//var yearsNumber= prompt("In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one)")
+function nextThought(){
 
-function firstGather(){
-var first= document.getElementById("firstInteger");
+var userName=0
 
-first.innerHTML= firstForm.myText.value
-
-var firstResponce= 0;
-
-firstResponse=firstForm.myText.value;
+userName= nameForm.nameText.value
+//end first question
 
 
 
+ tempId= document.getElementById("introduction");
 
+tempId.innerHTML="Alright, " + userName + " , I have gathered that you wish to have your fortune told? Let us begin your session!"; 
+//end first response
 
-}
+tempId= document.getElementById("firstNumberquestion");
 
-function testy(){
-alert(firstGather)
-}
+tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click anywhere to continue.)"
+//end second response
+
+var firstQuestionResponse= 0
+
+firstQuestionResponse= firstNumberForm.firstNumberText.value
+// end firstQuestionResponse variable formation 
+
+ tempId= document.getElementById("secondNumberQuestion");
+
+tempId.innerHTML=  secondQuestionResponse + "? alright, the spirits require another integer. Between one and three." 
+
+} // end function nextThought 
+
 
 </script>
 
-<body>
+<body onclick=nextThought()>
+
+<p onclick=nextThought> input your username in the following space, then click anywhere to begin. </p>
+
+
+	<form name="nameForm" >
+
+		<input name="nameText" type="text" >
+	
+	</form>
 
 
 
-<form name="firstForm">
+<div id="introduction"> first message will appear here. </div>
 
-<input name="myText" type="text">
+<div id= "firstNumberQuestion">  second message will appear here. </div>
 
-</form>
 
-<button onClick=firstGather()> In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one. When complete, click here) </button>
+	<form name="firstNumberForm" >
 
-<p id="test" onClick=testy()> click </p>
+		<input name="firstNumberText" type="text" >
+	
+	</form> 
+
+ <div id= "secondNumberQuestion"> Third message will appear here. </div>  
+
+
+
+<!-- output to a element (p, div) will only work if you have that element  -->
+
+
+
+
+<!-- input using forms only works if you have a form with an input tag  -->
+
+
+
 </body>

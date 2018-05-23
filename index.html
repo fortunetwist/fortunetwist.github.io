@@ -23,6 +23,8 @@ yearsNumber + "? alright, the spirits require another integer. Between one and t
 
  
 // here is the first output function
+
+
 function nextThought(){
 
 var userName=0
@@ -42,9 +44,16 @@ tempId= document.getElementById("firstNumberquestion");
 tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click anywhere to continue.)"
 //end second response
 
-} // end function nextThought
+var firstQuestionResponse= 0
 
-//need to add user
+firstQuestionResponse= firstNumberForm.firstNumberText.value
+// end firstQuestionResponse variable formation 
+
+ tempId= document.getElementById("secondNumberQuestion");
+
+tempId.innerHTML=  secondQuestionResponse + "? alright, the spirits require another integer. Between one and three." 
+
+} // end function nextThought 
 
 
 
@@ -81,15 +90,22 @@ tempId.innerHTML="In order to read the spirits, I will need a integer between on
 
 <div id="introduction"> first message will appear here. </div>
 
-<div id= "firstNumberquestion">  second message will appear here. </div>
+<div id= "firstNumberQuestion">  second message will appear here. </div>
 
 
 	<form name="firstNumberForm" >
 
 		<input name="firstNumberText" type="text" >
 	
-	</form>
+	</form> 
 
+ <div id= "secondNumberQuestion"> Third message will appear here. </div>  
+
+ <!-- currently only first two questions work-->
+
+ <!-- Next, get rest of questions working-->
+
+<!-- Then, make rest of questions-->
 
 
 <!-- output to a element (p, div) will only work if you have that element  -->
@@ -102,6 +118,5 @@ tempId.innerHTML="In order to read the spirits, I will need a integer between on
 
 
 </body>
-
 
 </html>
