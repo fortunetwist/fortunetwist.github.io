@@ -20,66 +20,47 @@ tempId.innerHTML="Alright, " + userName + " , I have gathered that you wish to h
 //first response: functional
 
 
+tempId= document.getElementById("firstNumQuestion");
+
+tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click anywhere to continue.)"; 
 
 
+var firstNumResponse=0
 
-var firstumQuestionResponse= 0
-
-firstNumQuestionResponse= firstNumForm.firstNumText.value
-//end firstNUmQuestion 
-
-
-
- tempId= document.getElementById("firstNumquestion");
-
-tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click anywhere to continue.)"
-//end second response
-
-// end firstQuestionResponse variable formation 
-//first question: not functional
-// must get question to show up on page
+firstNumResponse= firstnumForm.firstnumText.value
+//end first num question
+//first num question: functional
 
 
 
 
 
+tempId= document.getElementById("secondNumQuestion");
 
- tempId= document.getElementById("secondNumberQuestion");
+tempId.innerHTML= "? alright, the spirits require another integer. Between one and three."; 
+
+
+var secondNumResponse=0
+
+secondNumResponse= secondNumForm.secondNumText.value
+//end first num question
+//second num question: not functional
+
+
+
+/*
+
+tempId= document.getElementById("secondNumberQuestion");
 
 tempId.innerHTML=  secondQuestionResponse + "? alright, the spirits require another integer. Between one and three." 
 // end secondtQuestionResponse
 //second question: not functional
-// must get question to show up on page
+// must get question to show up on page */
 
 } // end function nextThought 
 
 
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -116,7 +97,13 @@ tempId.innerHTML=  secondQuestionResponse + "? alright, the spirits require anot
 
 
 
- <div id= "secondNumberQuestion"> Third message will appear here. </div>  
+ <div id= "secondNumQuestion"> Third message will appear here. </div>  
+
+ 	<form name="secondNumForm" >
+
+		<input name="secondNumText" type="text" >
+	
+	</form> 
 
  <!-- currently only first two questions work-->
 
