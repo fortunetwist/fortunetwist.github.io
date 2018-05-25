@@ -17,29 +17,76 @@ userName= nameForm.nameText.value
 
 tempId.innerHTML="Alright, " + userName + " , I have gathered that you wish to have your fortune told? Let us begin your session!"; 
 //end first response
+//first response: functional
 
-tempId= document.getElementById("firstNumberquestion");
+
+
+
+
+var firstumQuestionResponse= 0
+
+firstNumQuestionResponse= firstNumForm.firstNumText.value
+//end firstNUmQuestion 
+
+
+
+ tempId= document.getElementById("firstNumquestion");
 
 tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click anywhere to continue.)"
 //end second response
 
-var firstQuestionResponse= 0
-
-firstQuestionResponse= firstNumberForm.firstNumberText.value
 // end firstQuestionResponse variable formation 
+//first question: not functional
+// must get question to show up on page
+
+
+
+
+
 
  tempId= document.getElementById("secondNumberQuestion");
 
 tempId.innerHTML=  secondQuestionResponse + "? alright, the spirits require another integer. Between one and three." 
+// end secondtQuestionResponse
+//second question: not functional
+// must get question to show up on page
 
 } // end function nextThought 
 
 
 </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <body onclick=nextThought()>
 
-<p onclick=nextThought> input your username in the following space, then click anywhere to begin. </p>
+<p> input your username in the following space, then click anywhere to begin. </p>
 
 
 	<form name="nameForm" >
@@ -50,16 +97,24 @@ tempId.innerHTML=  secondQuestionResponse + "? alright, the spirits require anot
 
 
 
+
+
 <div id="introduction"> first message will appear here. </div>
 
-<div id= "firstNumberQuestion">  second message will appear here. </div>
 
 
-	<form name="firstNumberForm" >
+<div id= "firstNumQuestion">  second message will appear here. </div>
 
-		<input name="firstNumberText" type="text" >
+
+
+
+	<form name="firstNumForm" >
+
+		<input name="firstNumText" type="text" >
 	
 	</form> 
+
+
 
  <div id= "secondNumberQuestion"> Third message will appear here. </div>  
 
