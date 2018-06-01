@@ -1,0 +1,57 @@
+
+<script>
+
+
+function yearsFunction(){
+tempId= document.getElementById("firstNumQuestion");
+
+tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click the next button to continue.)"; 
+
+
+var yearsNumber=0
+
+yearsNumber= secondNumForm.secondNumText.value
+//end second num question
+//second num question: not functional
+
+yearsNumber=eval(yearsNumber);
+
+if(yearsNumber==1){
+	var yearsValue= "one year, "
+}//end if statement
+if(yearsNumber==2){
+	var yearsValue= "five years, "
+}//end if statement
+if(yearsNumber==3){
+	var yearsValue= " seventy three years, "
+} //end if statement
+
+}
+
+</script>
+
+
+
+<body>
+
+
+
+<div id= "firstNumQuestion">  second message will appear here once you click the button. </div>
+
+<form name="firstNumForm" >
+
+		<input name="firstNumText" type="text" >
+	
+</form> 
+
+<button onclick= "yearsFunction"> click here to continue </button>
+
+
+ <!-- currently only first two questions work-->
+
+ <!-- Next, get rest of questions working-->
+
+<!-- Then, make rest of questions-->
+
+</body>
+

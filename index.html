@@ -41,25 +41,166 @@ userName= nameForm.nameText.value
 
 tempId.innerHTML="Alright, " + userName + " , I have gathered that you wish to have your fortune told? Let us begin your session!"; 
 //end first response
+//first response: functional
 
-tempId= document.getElementById("firstNumberquestion");
 
-tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click anywhere to continue.)"
-//end second response
+tempId= document.getElementById("firstNumQuestion");
 
-var firstQuestionResponse= 0
+tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click anywhere to continue.)"; 
 
-firstQuestionResponse= firstNumberForm.firstNumberText.value
-// end firstQuestionResponse variable formation 
 
- tempId= document.getElementById("secondNumberQuestion");
+var firstNumResponse=0
+
+firstNumResponse= firstnumForm.firstnumText.value
+//end first num question
+//first num question: functional
+
+
+
+
+
+tempId= document.getElementById("secondNumQuestion");
+
+tempId.innerHTML=" ? Alright, the spirits require another integer. Between 1 and 3."; 
+
+
+var secondNumResponse=0
+
+secondNumResponse= secondNumForm.secondNumText.value
+//end second num question
+//second num question: not functional
+
+console.log
+
+
+
+/*
+
+tempId= document.getElementById("secondNumberQuestion");
 
 tempId.innerHTML=  secondQuestionResponse + "? alright, the spirits require another integer. Between one and three." 
+// end secondtQuestionResponse
+//second question: not functional
+// must get question to show up on page */
 
 } // end function nextThought 
 
+function intro(){
+
+var userName=0
+
+userName= nameForm.nameText.value
+//end first question
 
 
+
+
+
+ tempId= document.getElementById("introduction");
+
+tempId.innerHTML="Alright, " + userName + " , I have gathered that you wish to have your fortune told? Let us begin your session!"; 
+//end first response
+//first response: functional
+
+}
+
+
+function yearsFunction(){
+tempId= document.getElementById("firstNumQuestion");
+
+tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click the next button to continue.)"; 
+
+
+var yearsNumber=0
+
+yearsNumber= secondNumForm.secondNumText.value
+//end second num question
+//second num question: not functional
+
+yearsNumber=eval(yearsNumber);
+
+if(yearsNumber==1){
+	var yearsValue= "one year, "
+}//end if statement
+if(yearsNumber==2){
+	var yearsValue= "five years, "
+}//end if statement
+if(yearsNumber==3){
+	var yearsValue= " seventy three years, "
+} //end if statement
+
+}
+
+
+
+
+
+function successFunction(){
+
+tempId= document.getElementById("secondNumQuestion");
+
+tempId.innerHTML=   " ? Alright, the spirits require another integer. Between 1 and 3." ; 
+
+
+var yearsNumber=0
+
+yearsNumber= secondNumForm.secondNumText.value
+
+
+
+var successNumber= eval(successNumber);
+
+if(successNumber==1){
+	var successValue="struggling "
+}
+
+if (successNumber==2){
+	var successValue="successful "
+}
+
+if(successNumber==3){
+	var successValue=" failed "
+}
+
+
+
+}
+
+function careerFunction(){
+
+
+tempId= document.getElementById("secondNumQuestion");
+
+tempId.innerHTML= " ? Alright, the spirits require another integer. Between 1 and 3."; 
+
+
+//find variable
+var successNumber=0
+
+successNumber= secondNumForm.secondNumText.value
+
+var careerNumber= eval(careerNumber);
+//end variable finding
+
+//start if statment: evaluates responce
+if (careerNumber==1){
+	var careerValue=" student "
+}
+
+if (careerNumber==2) {
+	var careerValue=" brain surgeon "
+}
+
+if (careerNumber==3) { 
+	var careerValue=" chef "
+ }
+
+ if(careerNumber== 4){
+ 	var careerValue=" Walmart employee "
+ }
+//end if statement
+
+}
 // dear SAF I am so proud of you, signed mr. Rowe
 // please examine the output test file , then merge that code in here...
 
@@ -72,7 +213,7 @@ tempId.innerHTML=  secondQuestionResponse + "? alright, the spirits require anot
 
 </head>
 
-<body onclick=nextThought()>
+<body >
 
 	<!-- open of container -->
 <div id="container"> 
@@ -80,7 +221,7 @@ tempId.innerHTML=  secondQuestionResponse + "? alright, the spirits require anot
     <!-- this is a nested div to hold the tiny menus -->
 	<div id="headermenu"> 
 		
-		<img src="https://s1.postimg.org/24ssd9y7tb/cooltext262565515583586.png" align="center">
+		<!-- <img src="https://s1.postimg.org/24ssd9y7tb/cooltext262565515583586.png" align="center"> -->
 
 	<a href="index.html"> <div class="button"> Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> </a>
 
@@ -104,8 +245,7 @@ tempId.innerHTML=  secondQuestionResponse + "? alright, the spirits require anot
 
 		<!-- end arthur button -->
 
-			<a href="http://knowyourmeme.com/memes/spoopy"> <div class="button"> Spoopy SpoopS </div> </a> 
-
+			<a href="finalproject/index.html"> <div class="button"> Javascript Fortune </div> </a> 
 		<!-- end pill button -->
 
 		 <a href="http://knowyourmeme.com/memes/crying-michael-jordan"> <div class="buttonright"> Crying Jordan </div> </a> 
@@ -122,7 +262,7 @@ tempId.innerHTML=  secondQuestionResponse + "? alright, the spirits require anot
            <!-- <img src="https://s33.postimg.org/7ytwnneun/gjhmhm.png" align="center"> -->
 
 
-<p onclick=nextThought> input your username in the following space, then click anywhere to begin. </p>
+<p> input your username in the following space, then click the button to continue. </p>
 
 
 	<form name="nameForm" >
@@ -131,20 +271,41 @@ tempId.innerHTML=  secondQuestionResponse + "? alright, the spirits require anot
 	
 	</form>
 
+	<button onclick=intro()> Click to begin </button>
 
 
-<div id="introduction"> first message will appear here. </div>
-
-<div id= "firstNumberQuestion">  second message will appear here. </div>
 
 
-	<form name="firstNumberForm" >
 
-		<input name="firstNumberText" type="text" >
+<div id="introduction"> first message will appear here once you click the button. </div>
+
+
+
+<div id= "firstNumQuestion">  second message will appear here once you click the button. </div>
+
+<form name="firstNumForm" >
+
+		<input name="firstNumText" type="text" >
 	
-	</form> 
+</form> 
 
- <div id= "secondNumberQuestion"> Third message will appear here. </div>  
+<button onclick= "yearsFunction"> click here to continue </button>
+
+
+<div id= "secondNumQuestion">  third message will appear here once you click the button. </div>
+
+<form name="secondNumForm" >
+
+		<input name="secondNumText" type="text" >
+	
+</form> 
+
+<button onclick=successQuestion()>
+
+click to continue
+
+</button>
+
 
  <!-- currently only first two questions work-->
 
