@@ -2,15 +2,40 @@
 <script>
 
 
-function yearsFunction(){
-tempId= document.getElementById("firstNumQuestion");
+function intro(){
 
-tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click the next button to continue.)"; 
+var userName=0
+
+userName= nameForm.nameText.value
+//end first question
+
+
+
+
+
+ tempId= document.getElementById("introduction");
+
+tempId.innerHTML="Alright, " + userName + " , I have gathered that you wish to have your fortune told? Let us begin your session! In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click the next button to continue.)"; 
+//end first response
+//first response: functional
+
+}
+
+
+
+
+
+
+
+function yearsFunction(){
+tempId= document.getElementById("yearsNumQuestion");
+
+// tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click the next button to continue.)"; 
 
 
 var yearsNumber=0
 
-yearsNumber= secondNumForm.secondNumText.value
+yearsNumber= yearsNumForm.yearsNumText.value
 //end second num question
 //second num question: not functional
 
@@ -28,6 +53,85 @@ if(yearsNumber==3){
 
 }
 
+
+
+
+
+/*
+
+function successFunction(){
+
+tempId= document.getElementById("secondNumQuestion");
+
+tempId.innerHTML=   " ? Alright, the spirits require another integer. Between 1 and 3." ; 
+
+
+var yearsNumber=0
+
+yearsNumber= secondNumForm.secondNumText.value
+
+
+
+var successNumber= eval(successNumber);
+
+if(successNumber==1){
+	var successValue="struggling "
+}
+
+if (successNumber==2){
+	var successValue="successful "
+}
+
+if(successNumber==3){
+	var successValue=" failed "
+}
+
+
+
+}
+
+
+
+
+
+
+
+function careerFunction(){
+
+
+tempId= document.getElementById("secondNumQuestion");
+
+tempId.innerHTML= " ? Alright, the spirits require another integer. Between 1 and 3."; 
+
+
+//find variable
+var successNumber=0
+
+successNumber= secondNumForm.secondNumText.value
+
+var careerNumber= eval(careerNumber);
+//end variable finding
+
+//start if statment: evaluates responce
+if (careerNumber==1){
+	var careerValue=" student "
+}
+
+if (careerNumber==2) {
+	var careerValue=" brain surgeon "
+}
+
+if (careerNumber==3) { 
+	var careerValue=" chef "
+ }
+
+ if(careerNumber== 4){
+ 	var careerValue=" Walmart employee "
+ }
+//end if statement
+} */
+
+
 </script>
 
 
@@ -35,23 +139,103 @@ if(yearsNumber==3){
 <body>
 
 
+	<form name="nameForm" >
 
-<div id= "firstNumQuestion">  second message will appear here once you click the button. </div>
+		<input name="nameText" type="text" >
+	
+	</form>
 
-<form name="firstNumForm" >
+	<button onclick=intro()> Click to begin </button>
 
-		<input name="firstNumText" type="text" >
+
+
+
+
+
+
+<div id="introduction"> first message will appear here once you click the button. </div>
+
+
+
+
+
+
+
+
+<form name="yearsNumForm" >
+
+		<input name="yearsNumText" type="text" >
 	
 </form> 
 
+
+
+
+
 <button onclick= "yearsFunction"> click here to continue </button>
 
+<!-- 
+<div id= "secondNumQuestion">  third message will appear here once you click the button. </div>
 
- <!-- currently only first two questions work-->
+<form name="secondNumForm" >
 
- <!-- Next, get rest of questions working-->
+		<input name="secondNumText" type="text" >
+	
+</form> 
 
-<!-- Then, make rest of questions-->
 
-</body>
+
+
+<button onclick=successQuestion()>
+
+click to continue
+
+</button>
+
+-->
+
+</body> 
+
+
+<!-- function yearsFunction(){
+tempId= document.getElementById("yearsNumQuestion");
+
+tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click the next button to continue.)"; 
+
+
+var yearsNumber=0
+
+yearsNumber= yearsNumForm.yearsNumText.value
+//end second num question
+//second num question: not functional
+
+yearsNumber=eval(yearsNumber);
+
+if(yearsNumber==1){
+	var yearsValue= "one year, "
+}//end if statement
+if(yearsNumber==2){
+	var yearsValue= "five years, "
+}//end if statement
+if(yearsNumber==3){
+	var yearsValue= " seventy three years, "
+} //end if statement
+
+}
+
+
+
+<div id= "yearsNumQuestion">  second message will appear here once you click the button. </div>
+
+<form name="yearsNumForm" >
+
+		<input name="yearsNumText" type="text" >
+	
+</form> 
+
+
+
+
+
+<button onclick= "yearsFunction"> click here to continue </button> -->
 
