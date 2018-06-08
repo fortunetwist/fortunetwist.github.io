@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Fortune Teller With A Twist v5.21.309 update </title>
+<title>Fortune Twist</title>
 
 <link rel="stylesheet" type="text/css" href="../a4.css">
 
@@ -51,171 +51,41 @@ tempId.innerHTML="Alright, " + userName + " , I have gathered that you wish to h
 
 
 function yearsFunction(){
-tempId= document.getElementById("yearsNumQuestion");
 
 // tempId.innerHTML="In order to read the spirits, I will need a integer between one and three. (please input a value such as 1 instead of one in the following space, then click the next button to continue.)"; 
 
 
 var yearsNumber=0
 
+var yearsId=0
 yearsNumber= yearsNumForm.yearsNumText.value
 //end second num question
 //second num question: not functional
+var yearsValue= 0
 
 yearsNumber=eval(yearsNumber);
 
 if(yearsNumber==1){
-	var yearsValue= "one year, "
+	 yearsValue= "one year, "
 }//end if statement
 if(yearsNumber==2){
-	var yearsValue= "five years, "
+	 yearsValue= "five years, "
 }//end if statement
 if(yearsNumber==3){
-	var yearsValue= " seventy three years, "
-
-	tempId= document.getElementById("successNumQuestion");
-
-tempId.innerHTML= "? Alright, the spirits require another integer. Between 1 and 3." ; 
-
-
-var successNumber=0
-
-successNumber= successNumForm.successNumText.value
-
-
-
-var successNumber= eval(successNumber);
-
-if(successNumber==1){
-	var successValue="struggling "
-}
-
-if (successNumber==2){
-	var successValue="successful "
-}
-
-if(successNumber==3){
-	var successValue=" failed "
-}
-
-
-
-tempId= document.getElementById("successNumQuestion");
-
-tempId.innerHTML= " ? Alright, the spirits require another integer. Between 1 and 3."; 
-
+	 yearsValue= " seventy three years, "
 } //end if statement
 
-}
+console.log("code before innerHTML 3 ");
+tempId= document.getElementById("outputdiv");
+tempId.innerHTML=  "? Alright, the spirits require another integer. Between 1 and 3." ; 
+
+
+}// end function yearsFunction
 
 
 
-
-/* function successFunction(){
-
-tempId= document.getElementById("successNumQuestion");
-
-tempId.innerHTML= "? Alright, the spirits require another integer. Between 1 and 3." ; 
-
-
-var successNumber=0
-
-successNumber= successNumForm.successNumText.value
-
-
-
-var successNumber= eval(successNumber);
-
-if(successNumber==1){
-	var successValue="struggling "
-}
-
-if (successNumber==2){
-	var successValue="successful "
-}
-
-if(successNumber==3){
-	var successValue=" failed "
-}
-
-
-
-tempId= document.getElementById("successNumQuestion");
-
-tempId.innerHTML= " ? Alright, the spirits require another integer. Between 1 and 3."; 
-
-
-//find variable
-/* var careerNumber=0
-
-careerNumber= careerNumForm.careerNumText.value
-
-var careerNumber= eval(careerNumber);
-//end variable finding
-
-//start if statment: evaluates responce
-if (careerNumber==1){
-	var careerValue=" student "
-}
-
-if (careerNumber==2) {
-	var careerValue=" brain surgeon "
-}
-
-if (careerNumber==3) { 
-	var careerValue=" chef "
- }
-
- if(careerNumber== 4){
- 	var careerValue=" Walmart employee "
- }
-//end if statement */
-
-
-// }
-
-/* function careerFunction(){
-
-
-tempId= document.getElementById("secondNumQuestion");
-
-tempId.innerHTML= " ? Alright, the spirits require another integer. Between 1 and 3."; 
-
-
-//find variable
-var careerNumber=0
-
-careerNumber= careerNumForm.careerNumText.value
-
-var careerNumber= eval(careerNumber);
-//end variable finding
-
-//start if statment: evaluates responce
-if (careerNumber==1){
-	var careerValue=" student "
-}
-
-if (careerNumber==2) {
-	var careerValue=" brain surgeon "
-}
-
-if (careerNumber==3) { 
-	var careerValue=" chef "
- }
-
- if(careerNumber== 4){
- 	var careerValue=" Walmart employee "
- }
-//end if statement
-
-} */
 // dear SAF I am so proud of you, signed mr. Rowe
 // please examine the output test file , then merge that code in here...
-
-
-// fortune structure: ("in" + number + "years, you will be" + success value + career option + "in " + health value + "with" + pets value + "and you shall be " + happiness value)
-
-
 
 </script>
 
@@ -272,29 +142,15 @@ if (careerNumber==3) {
 
 <p> input your username in the following space, then click the button to continue. </p>
 
-
 	<form name="nameForm" >
 
 		<input name="nameText" type="text" >
 	
 	</form>
 
-	<button onclick=intro()> Click to begin </button>
-
-
-
-
-
-
+	<button onclick=intro()> Click to begin 1</button>
 
 <div id="introduction"> first message will appear here once you click the button. </div>
-
-
-
-
-
-
-
 
 <form name="yearsNumForm" >
 
@@ -302,29 +158,9 @@ if (careerNumber==3) {
 	
 </form> 
 
+<button onclick=yearsFunction()> click here to continue 2</button>
 
-
-
-
-<button onclick= "yearsFunction"> click here to continue </button>
-
-
-
-
-
-<div id= "successNumQuestion">  third message will appear here once you click the button. </div>
-
-<form name="successNumForm" >
-
-		<input name="successNumText" type="text" >
-	
-</form> 
-
-<button onclick=successFunction()>
-
-click to continue
-
-</button>
+<div id="outputdiv"> Next message will appear when button is clicked. </div>
 
 
  <!-- currently only first two questions work-->
